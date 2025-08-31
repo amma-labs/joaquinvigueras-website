@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joaquín Vigueras | Futuros para Líderes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Importa la fuente Saira Condensed desde Google Fonts -->
+    
+    <!-- Enlace a la fuente Barlow Condensed de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/jd.png" type="image/png">
     <style>
         body {
-            font-family: 'Archivo', sans-serif;
+            font-family: sans-serif; /* Fallback */
+            font-weight: 400;
             background-color: #ffffff;
             color: #333;
-            /* Fondo fijo para la página */
-            background-image: url('https://images.unsplash.com/photo-1596483266428-d4a5f6b27f2a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            /* Nuevo fondo de imagen de Pexels */
+            background-image: url('https://images.pexels.com/photos/31062844/pexels-photo-31062844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
         }
 
-        /* Aplica la fuente Saira Condensed a todos los títulos y a la navegación */
+        /* Aplica la fuente Barlow Condensed a todos los títulos y a la navegación */
         h1, h2, h3, nav a {
-            font-family: 'Saira Condensed', sans-serif;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
         }
         
         .header-bg {
@@ -52,11 +57,17 @@
             z-index: 10;
         }
 
-        .menu-open {
+        /* Mobile Menu styles */
+        #mobile-menu {
+            transform: translateX(-100%);
+        }
+        #mobile-menu.active {
             transform: translateX(0);
         }
-        .menu-closed {
-            transform: translateX(-100%);
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
@@ -67,8 +78,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative flex justify-center items-center h-16">
                 <!-- Hamburger Menu Button -->
-                <button id="menu-button" class="absolute left-0 p-2 text-black focus:outline-none">
-                    <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="menu-button" class="absolute left-0 p-2 text-white focus:outline-none">
+                    <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
@@ -81,7 +92,7 @@
     </nav>
 
     <!-- Sidebar Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-black bg-opacity-95 z-40 transform menu-closed transition-transform duration-300 ease-in-out">
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-black bg-opacity-95 z-40 transition-transform">
         <div class="p-8">
             <nav class="flex flex-col space-y-6 mt-16">
                 <a href="#about" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Acerca de Mi</a>
@@ -263,13 +274,11 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         function toggleMenu() {
-            mobileMenu.classList.toggle('menu-open');
-            mobileMenu.classList.toggle('menu-closed');
+            mobileMenu.classList.toggle('active');
         }
 
         function closeMenu() {
-            mobileMenu.classList.remove('menu-open');
-            mobileMenu.classList.add('menu-closed');
+            mobileMenu.classList.remove('active');
         }
 
         menuButton.addEventListener('click', toggleMenu);
