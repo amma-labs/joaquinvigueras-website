@@ -7,43 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kelvinch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Avenir', sans-serif;
-            background-color: #f7f9fc;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
             color: #333;
         }
-        h1, h2, h3 {
-            font-family: 'Kelvinch', serif;
-        }
-        .text-gradient {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .header-bg {
+            background-color: #ffffff;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-gray-900">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md">
+    <nav class="bg-white py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-gray-900">
-                        joaquinvigueras.com
-                    </a>
-                </div>
-                <div class="flex items-center">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold">
+                    joaquinvigueras.com
+                </a>
+                <div class="flex items-center space-x-6">
+                    <a href="#about" class="text-gray-600 hover:underline transition duration-300">
                         Acerca de Mí
                     </a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">
+                    <a href="#services" class="text-gray-600 hover:underline transition duration-300">
                         Servicios
                     </a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">
+                    <a href="#contact" class="text-gray-600 hover:underline transition duration-300">
                         Contacto
                     </a>
                 </div>
@@ -52,20 +44,19 @@
     </nav>
 
     <!-- Header Section -->
-    <header class="bg-white py-16 sm:py-24 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-gray-900">
-                <span class="block">Anticipando el Futuro</span>
-                <span class="block text-gradient">para Líderes que Deciden Hoy.</span>
+    <header class="header-bg py-16 sm:py-24 lg:py-32">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                Anticipando el Futuro para Líderes que Deciden Hoy.
             </h1>
-            <p class="mt-4 sm:mt-6 lg:mt-8 max-w-2xl mx-auto text-lg text-gray-600">
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
                 Combino análisis de riesgo país, geopolítica y coyuntura electoral con pensamiento estratégico y herramientas de *foresight*.
             </p>
-            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#services" class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#services" class="px-6 py-3 border border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gray-100 transition duration-300">
                     Descubre mis servicios
                 </a>
-                <a href="#contact" class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-300">
+                <a href="#contact" class="px-6 py-3 border border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gray-100 transition duration-300">
                     Contactar
                 </a>
             </div>
@@ -73,34 +64,32 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    Acerca de Mí
-                </h2>
-                <p class="mt-4 text-xl text-gray-600">
-                    Soy un politólogo con formación financiera, dedicado a traducir escenarios futuros en estrategias accionables.
-                </p>
-            </div>
-            <div class="mt-12 grid gap-8 lg:grid-cols-3 lg:mt-16">
+    <section id="about" class="py-16 sm:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Acerca de Mí
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+                Soy un politólogo con formación financiera, dedicado a traducir escenarios futuros en estrategias accionables.
+            </p>
+            <div class="mt-12 space-y-8">
                 <!-- Skill Card 1 -->
-                <div class="p-6 bg-white rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-                    <h3 class="text-lg font-semibold text-gray-900">Análisis de Riesgo y Geopolítica</h3>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Análisis de Riesgo y Geopolítica</h3>
                     <p class="mt-2 text-gray-600">
                         Evalúo el entorno político y económico en mercados emergentes para identificar riesgos clave y optimizar inversiones.
                     </p>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="p-6 bg-white rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-                    <h3 class="text-lg font-semibold text-gray-900">Consultoría Política y Estratégica</h3>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Consultoría Política y Estratégica</h3>
                     <p class="mt-2 text-gray-600">
                         Diseño narrativas políticas y elaboro análisis de poder para candidaturas y tomadores de decisiones.
                     </p>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="p-6 bg-white rounded-lg shadow-md transition duration-300 transform hover:scale-105">
-                    <h3 class="text-lg font-semibold text-gray-900">Inteligencia de Futuros (Foresight)</h3>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Inteligencia de Futuros (Foresight)</h3>
                     <p class="mt-2 text-gray-600">
                         Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
                     </p>
@@ -111,48 +100,46 @@
 
     <!-- Services Section -->
     <section id="services" class="py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    Mis Servicios
-                </h2>
-                <p class="mt-4 text-xl text-gray-600">
-                    Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
-                </p>
-            </div>
-            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Mis Servicios
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+                Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
+            </p>
+            <div class="mt-12 space-y-8">
                 <!-- Service 1 -->
-                <div class="p-8 bg-white rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-gray-900">Estrategia de Futuros</h3>
-                    <p class="mt-4 text-gray-600">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Estrategia de Futuros</h3>
+                    <p class="mt-2 text-gray-600">
                         Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
                     </p>
                 </div>
                 <!-- Service 2 -->
-                <div class="p-8 bg-white rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-gray-900">Análisis Geopolítico</h3>
-                    <p class="mt-4 text-gray-600">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Análisis Geopolítico</h3>
+                    <p class="mt-2 text-gray-600">
                         Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
                     </p>
                 </div>
                 <!-- Service 3 -->
-                <div class="p-8 bg-white rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-gray-900">Consultoría de Narrativa</h3>
-                    <p class="mt-4 text-gray-600">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Consultoría de Narrativa</h3>
+                    <p class="mt-2 text-gray-600">
                         Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
                     </p>
                 </div>
                 <!-- Service 4 -->
-                <div class="p-8 bg-white rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-gray-900">Gestión de Crisis</h3>
-                    <p class="mt-4 text-gray-600">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Gestión de Crisis</h3>
+                    <p class="mt-2 text-gray-600">
                         Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
                     </p>
                 </div>
                 <!-- Service 5 -->
-                <div class="p-8 bg-white rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold text-gray-900">Análisis de Riesgo Financiero</h3>
-                    <p class="mt-4 text-gray-600">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Análisis de Riesgo Financiero</h3>
+                    <p class="mt-2 text-gray-600">
                         Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
                     </p>
                 </div>
@@ -161,19 +148,19 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 sm:py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+    <section id="contact" class="py-16 sm:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
                 ¿Estás pensando en el futuro? Yo ya estoy ahí.
             </h2>
-            <p class="mt-4 text-xl text-gray-600">
+            <p class="mt-4 text-lg text-gray-600">
                 Contacta conmigo para explorar cómo podemos trabajar juntos.
             </p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="mailto:joaquin.vigueras@icloud.com" class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gray-100 transition duration-300">
                     Enviar un Email
                 </a>
-                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-300">
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-gray-300 rounded-full font-medium text-gray-700 hover:bg-gray-100 transition duration-300">
                     LinkedIn
                 </a>
             </div>
@@ -181,8 +168,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
             © 2025 Joaquín Vigueras. Todos los derechos reservados.
         </div>
     </footer>
