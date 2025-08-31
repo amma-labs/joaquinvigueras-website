@@ -20,8 +20,8 @@
             font-weight: 400;
             background-color: #ffffff;
             color: #333;
-            /* Nuevo fondo de imagen de Pexels */
-            background-image: url('https://images.pexels.com/photos/31062844/pexels-photo-31062844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            /* Nuevo fondo de imagen de Unsplash */
+            background-image: url('https://images.unsplash.com/photo-1698226068221-f09c64703a55?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -300,13 +300,12 @@
         menuButton.addEventListener('click', toggleMenu);
         menuOverlay.addEventListener('click', closeMenu);
 
-        // JavaScript para la animación de revelado de texto, ahora con soporte para cursivas
-        function animateText(selector) {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(element => {
+        // JavaScript para la animación de revelado de texto, ahora con IntersectionObserver
+        document.addEventListener('DOMContentLoaded', () => {
+            // Función para dividir el texto en palabras y aplicar el estilo
+            function setupTextReveal(element) {
                 let text = element.textContent;
-                
-                // Reemplaza *palabra* con <i>palabra</i>
+                // Reemplaza *palabra* con <i>palabra</i> y divide en palabras
                 const formattedHtml = text.replace(/\*([^*]+)\*/g, '<i>$1</i>');
                 element.innerHTML = '';
                 
@@ -314,7 +313,6 @@
                 const doc = parser.parseFromString(`<div>${formattedHtml}</div>`, 'text/html');
                 const words = Array.from(doc.body.firstChild.childNodes);
                 
-                let delay = 0;
                 words.forEach(node => {
                     const nodeText = node.textContent;
                     if (nodeText.trim() === '') return;
@@ -326,25 +324,50 @@
                         wordSpan.appendChild(node.cloneNode(true));
                         wordSpan.innerHTML += ' ';
                     }
-                    
                     wordSpan.classList.add('word');
-                    wordSpan.style.transitionDelay = `${delay}ms`;
                     element.appendChild(wordSpan);
+                });
+            }
+
+            // Función para aplicar la animación con retardo
+            function animateText(element) {
+                const words = element.querySelectorAll('.word');
+                let delay = 0;
+                words.forEach(word => {
+                    word.style.transitionDelay = `${delay}ms`;
+                    word.style.opacity = 1;
+                    word.style.transform = 'translateY(0)';
                     delay += 70;
                 });
+            }
 
-                setTimeout(() => {
-                    document.querySelectorAll('.word').forEach(word => {
-                        word.style.opacity = 1;
-                        word.style.transform = 'translateY(0)';
-                    });
-                }, 100);
+            // Animar el "Hero Section" inmediatamente en la carga
+            const heroElements = document.querySelectorAll('.hero-content .text-reveal-container');
+            heroElements.forEach(element => {
+                setupTextReveal(element);
+                animateText(element);
             });
-        }
 
-        window.onload = function() {
-            animateText('.text-reveal-container');
-        }
+            // Observer para activar la animación cuando las secciones entran en el viewport
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionsToAnimate = entry.target.querySelectorAll('.text-reveal-container');
+                        sectionsToAnimate.forEach(section => {
+                            setupTextReveal(section);
+                            animateText(section);
+                        });
+                        observer.unobserve(entry.target); // Dejar de observar después de animar
+                    }
+                });
+            }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
+
+            // Observar todas las secciones relevantes
+            const sectionsToObserve = document.querySelectorAll('#about, #services, #blogs, #contact');
+            sectionsToObserve.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 
 </body>
