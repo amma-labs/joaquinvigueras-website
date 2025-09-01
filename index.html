@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVssss.png" type="image/png">
+    <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVhj.png" type="image/png">
     <style>
         /* Ahora la imagen de fondo se aplica a todo el cuerpo de la página */
         body {
@@ -72,6 +72,28 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Estilos y animación para la nueva cinta de texto */
+        .scrolling-text-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .scrolling-text {
+            display: inline-flex;
+            gap: 2rem;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -132,6 +154,18 @@
             </div>
             </div>
     </header>
+
+    <!-- Primera cinta de texto animada -->
+    <div class="scrolling-text-container py-3 bg-yellow-400">
+        <div class="scrolling-text">
+            <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
+                Estrategia de Futuros &bull; Análisis Geopolítico &bull; Consultoría de Narrativa &bull; Gestión de Crisis &bull; Análisis de Riesgo Financiero
+            </span>
+            <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
+                Estrategia de Futuros &bull; Análisis Geopolítico &bull; Consultoría de Narrativa &bull; Gestión de Crisis &bull; Análisis de Riesgo Financiero
+            </span>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section id="services" class="py-12 sm:py-24 relative z-0">
@@ -204,6 +238,18 @@
         </div>
     </section>
 
+    <!-- Segunda cinta de texto animada (en dirección opuesta) -->
+    <div class="scrolling-text-container py-3 bg-red-500 mt-12">
+        <div class="scrolling-text" style="animation-direction: reverse;">
+            <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
+                Foresight &bull; Narrativa Estratégica &bull; Geopolítica &bull; Riesgo Financiero &bull; Liderazgo
+            </span>
+            <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
+                Foresight &bull; Narrativa Estratégica &bull; Geopolítica &bull; Riesgo Financiero &bull; Liderazgo
+            </span>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="py-12 sm:py-24 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
@@ -230,7 +276,7 @@
                 </div>
                 <!-- Skill Card 3 -->
                 <div class="p-6 bg-white/10 rounded-lg border border-black transition duration-300 hover:scale-105">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Inteligencia de Futuros (Foresight)</h3>
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-left">Inteligencia de Futuros (Foresight)</h3>
                     <p class="mt-2 text-lg sm:text-xl text-left">
                         Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
                     </p>
