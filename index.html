@@ -76,26 +76,6 @@
             transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        
-        /* Estilos para el efecto de acordeón */
-        .accordion-content {
-            max-height: 0;
-            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-            overflow: hidden;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        .accordion-content.expanded {
-            max-height: 500px; /* Suficiente para la descripción */
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        .accordion-icon {
-            transition: transform 0.3s ease-in-out;
-        }
-        .accordion-icon.rotated {
-            transform: rotate(45deg);
-        }
     </style>
 </head>
 <body class="antialiased text-black">
@@ -156,6 +136,77 @@
             </div>
     </header>
 
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-28 relative z-0">
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
+            <p class="mt-4 text-lg sm:text-2xl text-gray-800">
+                Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
+            </p>
+            <div class="mt-10 sm:mt-12 space-y-8">
+                <!-- Service 1 (Collapsible) -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Estrategia de Futuros</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-black">
+                            Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 2 (Collapsible) -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis Geopolítico</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-black">
+                            Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 3 (Collapsible) -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Consultoría de Narrativa</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-black">
+                            Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 4 (Collapsible) -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Gestión de Crisis</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-black">
+                            Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 5 (Collapsible) -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis de Riesgo Financiero</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-black">
+                            Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-16 sm:py-28 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
@@ -167,96 +218,25 @@
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
                 <!-- Skill Card 1 -->
-                <div class="p-6 bg-[#38b6ff] rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
                     <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis de Riesgo y Geopolítica</h3>
                     <p class="mt-2 text-lg sm:text-xl text-black">
                         Evalúo el entorno político y económico en mercados emergentes para identificar riesgos clave y optimizar inversiones.
                     </p>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="p-6 bg-[#38b6ff] rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
                     <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Consultoría Política y Estratégica</h3>
                     <p class="mt-2 text-lg sm:text-xl text-black">
                         Diseño narrativas políticas y elaboro análisis de poder para candidaturas y tomadores de decisiones.
                     </p>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="p-6 bg-[#38b6ff] rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
                     <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Inteligencia de Futuros (Foresight)</h3>
                     <p class="mt-2 text-lg sm:text-xl text-black">
                         Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 sm:py-28 relative z-0">
-        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
-            <p class="mt-4 text-lg sm:text-2xl text-gray-800">
-                Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
-            </p>
-            <div class="mt-10 sm:mt-12 space-y-8">
-                <!-- Service 1 -->
-                <div class="bg-white/50 rounded-lg border border-gray-400">
-                    <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/70 transition duration-300 hover:scale-105" onclick="toggleService(this)">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Estrategia de Futuros</h3>
-                        <span class="text-3xl font-bold accordion-icon">+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="px-6 text-lg sm:text-xl text-black">
-                            Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-white/50 rounded-lg border border-gray-400">
-                    <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/70 transition duration-300 hover:scale-105" onclick="toggleService(this)">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis Geopolítico</h3>
-                        <span class="text-3xl font-bold accordion-icon">+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="px-6 text-lg sm:text-xl text-black">
-                            Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="bg-white/50 rounded-lg border border-gray-400">
-                    <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/70 transition duration-300 hover:scale-105" onclick="toggleService(this)">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Consultoría de Narrativa</h3>
-                        <span class="text-3xl font-bold accordion-icon">+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="px-6 text-lg sm:text-xl text-black">
-                            Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-white/50 rounded-lg border border-gray-400">
-                    <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/70 transition duration-300 hover:scale-105" onclick="toggleService(this)">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Gestión de Crisis</h3>
-                        <span class="text-3xl font-bold accordion-icon">+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="px-6 text-lg sm:text-xl text-black">
-                            Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="bg-white/50 rounded-lg border border-gray-400">
-                    <div class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/70 transition duration-300 hover:scale-105" onclick="toggleService(this)">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis de Riesgo Financiero</h3>
-                        <span class="text-3xl font-bold accordion-icon">+</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p class="px-6 text-lg sm:text-xl text-black">
-                            Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -399,28 +379,28 @@
             sectionsToObserve.forEach(section => {
                 observer.observe(section);
             });
-        });
 
-        // Función para el efecto de acordeón en la sección de servicios
-        function toggleService(element) {
-            const parent = element.parentElement;
-            const content = parent.querySelector('.accordion-content');
-            const icon = element.querySelector('.accordion-icon');
-            
-            if (content.classList.contains('expanded')) {
-                content.classList.remove('expanded');
-                icon.classList.remove('rotated');
-            } else {
-                // Colapsa todos los demás
-                document.querySelectorAll('.accordion-content.expanded').forEach(item => {
-                    item.classList.remove('expanded');
-                    item.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotated');
+            // Lógica para los menús colapsables de la sección "Servicios"
+            const serviceButtons = document.querySelectorAll('.service-button');
+            serviceButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const parent = button.parentElement;
+                    const content = parent.querySelector('.service-content');
+                    const icon = button.querySelector('.icon');
+
+                    // Alternar la visibilidad y el ícono
+                    if (content.classList.contains('max-h-0')) {
+                        content.classList.remove('max-h-0');
+                        content.classList.add('max-h-screen');
+                        icon.classList.add('rotate-45');
+                    } else {
+                        content.classList.remove('max-h-screen');
+                        content.classList.add('max-h-0');
+                        icon.classList.remove('rotate-45');
+                    }
                 });
-                // Expande el elemento actual
-                content.classList.add('expanded');
-                icon.classList.add('rotated');
-            }
-        }
+            });
+        });
     </script>
 
 </body>
