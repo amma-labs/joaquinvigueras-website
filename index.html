@@ -44,13 +44,12 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: black; /* Cambiado a negro */
             overflow: hidden;
         }
         .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.4);
+            /* Eliminado para transparencia total */
+            display: none;
         }
         .hero-content {
             position: relative;
@@ -79,15 +78,15 @@
         }
     </style>
 </head>
-<body class="antialiased text-white">
+<body class="antialiased text-black">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 bg-black/0 py-4 z-50">
+    <nav class="fixed top-0 left-0 right-0 py-4 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative flex justify-center items-center h-16">
                 <!-- Hamburger Menu Button -->
-                <button id="menu-button" class="absolute left-0 p-2 text-white focus:outline-none">
-                    <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="menu-button" class="absolute left-0 p-2 text-black focus:outline-none">
+                    <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
@@ -100,13 +99,13 @@
     </nav>
 
     <!-- Sidebar Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-black bg-opacity-50 z-40 transition-transform">
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-white/50 z-40 transition-transform">
         <div class="p-8">
             <nav class="flex flex-col space-y-6 mt-16">
-                <a href="#about" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Acerca de Mi</a>
-                <a href="#services" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Servicios</a>
-                <a href="#blogs" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Blogs</a>
-                <a href="#contact" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Contacto</a>
+                <a href="#about" class="text-lg text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mi</a>
+                <a href="#services" class="text-lg text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Servicios</a>
+                <a href="#blogs" class="text-lg text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Blogs</a>
+                <a href="#contact" class="text-lg text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Contacto</a>
             </nav>
         </div>
     </div>
@@ -116,22 +115,21 @@
 
     <!-- Header Section (Hero) -->
     <header class="hero-section">
-        <div class="hero-overlay"></div>
         
         <div class="hero-content max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Título con animación de revelado -->
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight uppercase text-reveal-container">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight uppercase text-reveal-container text-black">
                 Anticipando el Futuro para Líderes que Deciden Hoy.
             </h1>
             <!-- Párrafo con animación de revelado -->
-            <p class="mt-4 sm:mt-6 text-base sm:text-xl text-gray-200 max-w-2xl mx-auto text-reveal-container">
+            <p class="mt-4 sm:mt-6 text-base sm:text-xl text-gray-800 max-w-2xl mx-auto text-reveal-container">
                 Combino análisis de riesgo país, geopolítica y coyuntura electoral con pensamiento estratégico y herramientas de *foresight*.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#services" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                <a href="#services" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
                     Descubre mis servicios
                 </a>
-                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
                     LinkedIn
                 </a>
             </div>
@@ -140,7 +138,6 @@
 
     <!-- About Section -->
     <section id="about" class="py-16 sm:py-28 relative z-0">
-        
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
             <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase">
                 Acerca de Mi
@@ -150,23 +147,23 @@
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
                 <!-- Skill Card 1 -->
-                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
-                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Análisis de Riesgo y Geopolítica</h3>
-                    <p class="mt-2 text-base sm:text-lg text-white">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Análisis de Riesgo y Geopolítica</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
                         Evalúo el entorno político y económico en mercados emergentes para identificar riesgos clave y optimizar inversiones.
                     </p>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
-                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Consultoría Política y Estratégica</h3>
-                    <p class="mt-2 text-base sm:text-lg text-white">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Consultoría Política y Estratégica</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
                         Diseño narrativas políticas y elaboro análisis de poder para candidaturas y tomadores de decisiones.
                     </p>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
-                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Inteligencia de Futuros (Foresight)</h3>
-                    <p class="mt-2 text-base sm:text-lg text-white">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Inteligencia de Futuros (Foresight)</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
                         Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
                     </p>
                 </div>
@@ -176,45 +173,44 @@
 
     <!-- Services Section -->
     <section id="services" class="py-16 sm:py-28 relative z-0">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-white">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-black">
                 Mis Servicios
             </h2>
-            <p class="mt-4 text-base sm:text-xl text-gray-200">
+            <p class="mt-4 text-base sm:text-xl text-gray-800">
                 Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
                 <!-- Service 1 -->
-                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
                     <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Estrategia de Futuros</h3>
                     <p class="mt-2 text-base sm:text-lg text-black">
                         Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
                     </p>
                 </div>
                 <!-- Service 2 -->
-                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
                     <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Análisis Geopolítico</h3>
                     <p class="mt-2 text-base sm:text-lg text-black">
                         Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
                     </p>
                 </div>
                 <!-- Service 3 -->
-                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
                     <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Consultoría de Narrativa</h3>
                     <p class="mt-2 text-base sm:text-lg text-black">
                         Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
                     </p>
                 </div>
                 <!-- Service 4 -->
-                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
                     <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Gestión de Crisis</h3>
                     <p class="mt-2 text-base sm:text-lg text-black">
                         Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
                     </p>
                 </div>
                 <!-- Service 5 -->
-                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105 hover:bg-white/70">
                     <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Análisis de Riesgo Financiero</h3>
                     <p class="mt-2 text-base sm:text-lg text-black">
                         Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
@@ -226,23 +222,22 @@
 
     <!-- Blogs Section -->
     <section id="blogs" class="py-16 sm:py-28 relative z-0">
-        
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-black">
                 Blogs
             </h2>
             <div class="mt-10 sm:mt-12 space-y-8 flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 justify-center">
                 <!-- Substack 1 -->
-                <a href="https://geoestrategia.substack.com" target="_blank" class="block p-6 border border-white/50 rounded-lg text-white hover:text-white hover:bg-black/65 transition duration-300 hover:scale-105 bg-black/65">
-                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">GEOESTRATEGIA</h3>
-                    <p class="mt-2 text-base sm:text-lg text-white">
+                <a href="https://geoestrategia.substack.com" target="_blank" class="block p-6 bg-white/50 border border-gray-400 rounded-lg text-black hover:bg-white/70 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">GEOESTRATEGIA</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
                         Análisis profundos sobre geopolítica, riesgo país y coyuntura electoral, diseñados para líderes que toman decisiones.
                     </p>
                 </a>
                 <!-- Substack 2 -->
-                <a href="https://wildgeo.substack.com" target="_blank" class="block p-6 border border-white/50 rounded-lg text-white hover:text-white hover:bg-black/65 transition duration-300 hover:scale-105 bg-black/65">
-                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">WILD GEO</h3>
-                    <p class="mt-2 text-base sm:text-lg text-white">
+                <a href="https://wildgeo.substack.com" target="_blank" class="block p-6 bg-white/50 border border-gray-400 rounded-lg text-black hover:bg-white/70 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">WILD GEO</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
                         Insightful analysis on geopolitical trends and future scenarios, exploring wild card events that impact global strategy and finance.
                     </p>
                 </a>
@@ -252,19 +247,18 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 sm:py-28 relative z-0">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-white">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-black">
                 ¿Estás pensando en el futuro? Yo ya estoy ahí.
             </h2>
-            <p class="mt-4 text-base sm:text-xl text-gray-200">
+            <p class="mt-4 text-base sm:text-xl text-gray-800">
                 Contacta conmigo para explorar cómo podemos trabajar juntos.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-gray-400 rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
                     Enviar un Email
                 </a>
-                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-gray-400 rounded-full font-medium text-white hover:bg-yellow-400 hover:hover:text-gray-900 transition duration-300">
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
                     LinkedIn
                 </a>
             </div>
@@ -273,8 +267,7 @@
 
     <!-- Footer -->
     <footer class="py-8 relative z-0">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-base sm:text-lg text-gray-200">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-base sm:text-lg text-gray-800">
             © 2025 Joaquín Vigueras. Todos los derechos reservados.
         </div>
     </footer>
