@@ -15,16 +15,15 @@
     <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVssss.png" type="image/png">
     <style>
+        /* Ahora la imagen de fondo se aplica a todo el cuerpo de la página */
         body {
-            font-family: 'Barlow', sans-serif; /* Fallback */
+            font-family: 'Barlow', sans-serif;
             font-weight: 400;
-            background-color: #ffffff;
-            color: #333;
-            /* Nuevo fondo de pantalla proporcionado por el usuario */
-            background-image: url('https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/t/628462ccce0de5030604a247/1652843244462/MM1_Ultra_Gradient_Mac.png');
+            color: #000000; /* Texto negro para que contraste con el fondo claro */
+            background-image: url('https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/coming%20SOON.png');
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll; /* Se mueve con el desplazamiento de la página */
             background-position: center;
         }
 
@@ -44,11 +43,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: black; /* Cambiado a negro */
             overflow: hidden;
         }
         .hero-overlay {
-            /* Eliminado para transparencia total */
             display: none;
         }
         .hero-content {
@@ -78,7 +75,7 @@
         }
     </style>
 </head>
-<body class="antialiased text-black">
+<body class="antialiased">
 
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 py-4 z-50">
@@ -114,15 +111,15 @@
     <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
 
     <!-- Header Section (Hero) -->
-    <header class="hero-section">
+    <header class="hero-section text-black">
         
         <div class="hero-content max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Título con animación de revelado -->
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-tight uppercase text-reveal-container text-black">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-tight uppercase text-reveal-container">
                 Anticipando el Futuro para Líderes que Deciden Hoy.
             </h1>
             <!-- Párrafo con animación de revelado -->
-            <p class="mt-4 sm:mt-6 text-lg sm:text-2xl text-gray-800 max-w-2xl mx-auto text-reveal-container">
+            <p class="mt-4 sm:mt-6 text-lg sm:text-2xl text-black max-w-2xl mx-auto text-reveal-container">
                 Combino análisis de riesgo país, geopolítica y coyuntura electoral con pensamiento estratégico y herramientas de *foresight*.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -139,66 +136,66 @@
     <!-- Services Section -->
     <section id="services" class="py-12 sm:py-24 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
-            <p class="mt-4 text-lg sm:text-2xl text-gray-800 text-center">
+            <p class="mt-4 text-lg sm:text-2xl text-center">
                 Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
                 <!-- Service 1 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Estrategia de Futuros</h3>
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Estrategia de Futuros</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-black text-left">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
                             Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
                         </p>
                     </div>
                 </div>
                 <!-- Service 2 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis Geopolítico</h3>
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Análisis Geopolítico</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-black text-left">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
                             Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
                         </p>
                     </div>
                 </div>
                 <!-- Service 3 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Consultoría de Narrativa</h3>
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Consultoría de Narrativa</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-black text-left">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
                             Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
                         </p>
                     </div>
                 </div>
                 <!-- Service 4 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Gestión de Crisis</h3>
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Gestión de Crisis</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-black text-left">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
                             Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
                         </p>
                     </div>
                 </div>
                 <!-- Service 5 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">Análisis de Riesgo Financiero</h3>
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Análisis de Riesgo Financiero</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-black text-left">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
                             Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
                         </p>
                     </div>
@@ -208,33 +205,33 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-12 sm:py-24 relative z-0" style="background-image: url('https://images.unsplash.com/photo-1654521957182-f0277b65005a?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+    <section id="about" class="py-12 sm:py-24 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
             <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center">
                 Acerca de Mi
             </h2>
-            <p class="mt-4 text-lg sm:text-2xl text-black text-center">
+            <p class="mt-4 text-lg sm:text-2xl text-center">
                 Soy un politólogo con formación financiera, dedicado a traducir escenarios futuros en estrategias accionables.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
                 <!-- Skill Card 1 -->
-                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black text-left">Análisis de Riesgo y Geopolítica</h3>
-                    <p class="mt-2 text-lg sm:text-xl text-black text-left">
+                <div class="p-6 bg-white/10 rounded-lg border border-black transition duration-300 hover:scale-105">
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-left">Análisis de Riesgo y Geopolítica</h3>
+                    <p class="mt-2 text-lg sm:text-xl text-left">
                         Evalúo el entorno político y económico en mercados emergentes para identificar riesgos clave y optimizar inversiones.
                     </p>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black text-left">Consultoría Política y Estratégica</h3>
-                    <p class="mt-2 text-lg sm:text-xl text-black text-left">
+                <div class="p-6 bg-white/10 rounded-lg border border-black transition duration-300 hover:scale-105">
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-left">Consultoría Política y Estratégica</h3>
+                    <p class="mt-2 text-lg sm:text-xl text-left">
                         Diseño narrativas políticas y elaboro análisis de poder para candidaturas y tomadores de decisiones.
                     </p>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="p-6 bg-white rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black text-left">Inteligencia de Futuros (Foresight)</h3>
-                    <p class="mt-2 text-lg sm:text-xl text-black text-left">
+                <div class="p-6 bg-white/10 rounded-lg border border-black transition duration-300 hover:scale-105">
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Inteligencia de Futuros (Foresight)</h3>
+                    <p class="mt-2 text-lg sm:text-xl text-left">
                         Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
                     </p>
                 </div>
@@ -243,23 +240,23 @@
     </section>
 
     <!-- Blogs Section -->
-    <section id="blogs" class="py-12 sm:py-24 relative z-0 bg-[#fc00b8]">
-        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+    <section id="blogs" class="py-12 sm:py-24 relative z-0">
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
             <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center">
                 Blogs
             </h2>
             <div class="mt-10 sm:mt-12 space-y-8 flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 justify-center">
                 <!-- Substack 1 -->
-                <a href="https://geoestrategia.substack.com" target="_blank" class="block p-6 bg-white border border-black rounded-lg text-black hover:bg-white/70 transition duration-300 hover:scale-105 text-left">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">GEOESTRATEGIA</h3>
-                    <p class="mt-2 text-lg sm:text-xl text-black">
+                <a href="https://geoestrategia.substack.com" target="_blank" class="block p-6 bg-white/10 border border-black rounded-lg hover:bg-white/20 transition duration-300 hover:scale-105 text-left">
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase">GEOESTRATEGIA</h3>
+                    <p class="mt-2 text-lg sm:text-xl">
                         Análisis profundos sobre geopolítica, riesgo país y coyuntura electoral, diseñados para líderes que toman decisiones.
                     </p>
                 </a>
                 <!-- Substack 2 -->
-                <a href="https://wildgeo.substack.com" target="_blank" class="block p-6 bg-white border border-black rounded-lg text-black hover:bg-white/70 transition duration-300 hover:scale-105 text-left">
-                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase text-black">WILD GEO</h3>
-                    <p class="mt-2 text-lg sm:text-xl text-black">
+                <a href="https://wildgeo.substack.com" target="_blank" class="block p-6 bg-white/10 border border-black rounded-lg hover:bg-white/20 transition duration-300 hover:scale-105 text-left">
+                    <h3 class="text-2xl sm:text-3xl font-semibold uppercase">WILD GEO</h3>
+                    <p class="mt-2 text-lg sm:text-xl">
                         Insightful analysis on geopolitical trends and future scenarios, exploring wild card events that impact global strategy and finance.
                     </p>
                 </a>
@@ -268,19 +265,19 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-12 sm:py-24 relative z-0" style="background-image: url('https://images.unsplash.com/photo-1548031061-76f86064a5ff?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+    <section id="contact" class="py-12 sm:py-24 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-white text-center">
+            <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-black text-center">
                 ¿Estás pensando en el futuro? Yo ya estoy ahí.
             </h2>
-            <p class="mt-4 text-lg sm:text-2xl text-white text-center">
+            <p class="mt-4 text-lg sm:text-2xl text-black text-center">
                 Contacta conmigo para explorar cómo podemos trabajar juntos.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-white hover:text-gray-900 transition duration-300">
+                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-black hover:text-white transition duration-300">
                     Enviar un Email
                 </a>
-                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-white hover:text-gray-900 transition duration-300">
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-black hover:text-white transition duration-300">
                     LinkedIn
                 </a>
             </div>
@@ -288,8 +285,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 relative z-0 bg-black">
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-lg sm:text-xl text-white">
+    <footer class="py-8 relative z-0">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-lg sm:text-xl text-black">
             © 2025 Joaquín Vigueras. Todos los derechos reservados.
         </div>
     </footer>
