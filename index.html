@@ -3,85 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Concepto de Logo | Joaquín Vigueras</title>
+    <title>Joaquín Vigueras | Futuros para Líderes</title>
     
-    <!-- Enlace a la fuente de Google Fonts -->
+    <!-- Enlace a la fuente Barlow Condensed de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/favicon.png" type="image/png">
     <style>
         body {
-            font-family: 'Barlow Condensed', sans-serif;
-            background-color: #0d1117; /* Fondo oscuro, similar a un cielo nocturno */
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 90%;
-        }
-
-        .logo-mark {
-            width: 150px;
-            height: auto;
-            animation: pulse-glow 2s infinite ease-in-out;
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% {
-                filter: drop-shadow(0 0 5px #0ff) drop-shadow(0 0 10px #0ff);
-            }
-            50% {
-                filter: drop-shadow(0 0 10px #0ff) drop-shadow(0 0 20px #0ff);
-            }
-        }
-
-        .logo-text {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            font-size: 2.5rem;
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 5px #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .logo-slogan {
-            font-family: 'Orbitron', sans-serif;
+            font-family: sans-serif; /* Fallback */
             font-weight: 400;
-            font-size: 1rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            background-color: #ffffff;
+            color: #333;
+            /* Nuevo fondo de imagen con un cielo borroso */
+            background-image: url('https://images.unsplash.com/photo-1549727546-d4464ac4c431?q=80&w=1953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Aplica la fuente Barlow Condensed a todos los títulos y a la navegación */
+        h1, h2, h3, nav a {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+        }
+        
+        .header-bg {
+            background-color: #ffffff;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Mobile Menu styles */
+        #mobile-menu {
+            transform: translateX(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Animation for text reveal */
+        .text-reveal-container .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
     </style>
 </head>
-<body>
+<body class="antialiased text-white">
 
-    <div class="logo-container">
-        <!-- Logo en SVG para un estilo limpio y escalable -->
-        <svg class="logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Letra J -->
-            <path d="M 5 95 L 5 25 Q 5 15 15 15 H 95" stroke="#00d4ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Letra V -->
-            <path d="M 25 5 L 50 95 L 75 5" stroke="#00d4ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-black/0 py-4 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative flex justify-center items-center h-16">
+                <!-- Hamburger Menu Button -->
+                <button id="menu-button" class="absolute left-0 p-2 text-white focus:outline-none">
+                    <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Logo -->
+                <a href="#" class="absolute left-1/2 transform -translate-x-1/2">
+                    <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/favicon.png" alt="Logotipo de Joaquín Vigueras" class="h-8 sm:h-12">
+                </a>
+            </div>
+        </div>
+    </nav>
 
-        <h1 class="logo-text">JOAQUÍN VIGUERAS</h1>
-        <p class="logo-slogan">FUTUROS PARA LÍDERES</p>
+    <!-- Sidebar Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-black bg-opacity-65 z-40 transition-transform">
+        <div class="p-8">
+            <nav class="flex flex-col space-y-6 mt-16">
+                <a href="#about" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Acerca de Mi</a>
+                <a href="#services" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Servicios</a>
+                <a href="#blogs" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Blogs</a>
+                <a href="#contact" class="text-lg text-white hover:underline transition duration-300 uppercase font-bold" onclick="closeMenu()">Contacto</a>
+            </nav>
+        </div>
     </div>
+
+    <!-- Overlay to close the menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
+
+    <!-- Header Section (Hero) -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Título con animación de revelado -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight uppercase text-reveal-container">
+                Anticipando el Futuro para Líderes que Deciden Hoy.
+            </h1>
+            <!-- Párrafo con animación de revelado -->
+            <p class="mt-4 sm:mt-6 text-base sm:text-xl text-gray-200 max-w-2xl mx-auto text-reveal-container">
+                Combino análisis de riesgo país, geopolítica y coyuntura electoral con pensamiento estratégico y herramientas de *foresight*.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#services" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                    Descubre mis servicios
+                </a>
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-white rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                    LinkedIn
+                </a>
+            </div>
+            </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-28 relative z-0">
+        
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase">
+                Acerca de Mi
+            </h2>
+            <p class="mt-4 text-base sm:text-xl text-gray-800">
+                Soy un politólogo con formación financiera, dedicado a traducir escenarios futuros en estrategias accionables.
+            </p>
+            <div class="mt-10 sm:mt-12 space-y-8">
+                <!-- Skill Card 1 -->
+                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Análisis de Riesgo y Geopolítica</h3>
+                    <p class="mt-2 text-base sm:text-lg text-white">
+                        Evalúo el entorno político y económico en mercados emergentes para identificar riesgos clave y optimizar inversiones.
+                    </p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Consultoría Política y Estratégica</h3>
+                    <p class="mt-2 text-base sm:text-lg text-white">
+                        Diseño narrativas políticas y elaboro análisis de poder para candidaturas y tomadores de decisiones.
+                    </p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="p-6 bg-black/65 rounded-lg border border-white/50 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">Inteligencia de Futuros (Foresight)</h3>
+                    <p class="mt-2 text-base sm:text-lg text-white">
+                        Anticipo tendencias del futuro en contextos de incertidumbre para navegar la complejidad y crear impacto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-28 relative z-0">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-white">
+                Mis Servicios
+            </h2>
+            <p class="mt-4 text-base sm:text-xl text-gray-200">
+                Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
+            </p>
+            <div class="mt-10 sm:mt-12 space-y-8">
+                <!-- Service 1 -->
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Estrategia de Futuros</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
+                        Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Análisis Geopolítico</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
+                        Proporciono análisis detallado sobre riesgos geopolíticos en América Latina, BRICS+ y el Sur Global, con un enfoque en geofinanzas y tecnología.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Consultoría de Narrativa</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
+                        Diseño narrativas políticas y estratégicas que conectan con audiencias, mejorando el *engagement* y la eficacia de los mensajes.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Gestión de Crisis</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
+                        Elaboro briefings sobre riesgos en seguridad y educación, ayudando a reducir tiempos de respuesta en crisis con una asignación presupuestaria optimizada.
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="p-6 bg-white/50 rounded-lg border border-gray-400 transition duration-300 hover:scale-105">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-black">Análisis de Riesgo Financiero</h3>
+                    <p class="mt-2 text-base sm:text-lg text-black">
+                        Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-16 sm:py-28 relative z-0">
+        
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-black">
+                Blogs
+            </h2>
+            <p class="mt-4 text-base sm:text-xl text-gray-800">
+                Aquí comparto mis análisis detallados sobre geopolítica, estrategia y futuros.
+            </p>
+            <div class="mt-10 sm:mt-12 space-y-8 flex flex-col sm:flex-row sm:space-x-8 sm:space-y-0 justify-center">
+                <!-- Substack 1 -->
+                <a href="https://geoestrategia.substack.com" target="_blank" class="block p-6 border border-white/50 rounded-lg text-white hover:text-white hover:bg-black/65 transition duration-300 hover:scale-105 bg-black/65">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">GEOESTRATEGIA</h3>
+                    <p class="mt-2 text-base sm:text-lg text-white">
+                        Análisis profundos sobre geopolítica, riesgo país y coyuntura electoral, diseñados para líderes que toman decisiones.
+                    </p>
+                </a>
+                <!-- Substack 2 -->
+                <a href="https://wildgeo.substack.com" target="_blank" class="block p-6 border border-white/50 rounded-lg text-white hover:text-white hover:bg-black/65 transition duration-300 hover:scale-105 bg-black/65">
+                    <h3 class="text-xl sm:text-2xl font-semibold uppercase text-white">WILD GEO</h3>
+                    <p class="mt-2 text-base sm:text-lg text-white">
+                        Insightful analysis on geopolitical trends and future scenarios, exploring wild card events that impact global strategy and finance.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-28 relative z-0">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-white">
+                ¿Estás pensando en el futuro? Yo ya estoy ahí.
+            </h2>
+            <p class="mt-4 text-base sm:text-xl text-gray-200">
+                Contacta conmigo para explorar cómo podemos trabajar juntos.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:joaquin.vigueras@icloud.com" class="px-6 py-3 border border-gray-400 rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                    Enviar un Email
+                </a>
+                <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-gray-400 rounded-full font-medium text-white hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 relative z-0">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-base sm:text-lg text-gray-200">
+            © 2025 Joaquín Vigueras. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('hidden');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.add('hidden');
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // JavaScript para la animación de revelado de texto, ahora con IntersectionObserver
+        document.addEventListener('DOMContentLoaded', () => {
+            // Función para dividir el texto en palabras y aplicar el estilo
+            function setupTextReveal(element) {
+                let text = element.textContent;
+                // Reemplaza *palabra* con <i>palabra</i> y divide en palabras
+                const formattedHtml = text.replace(/\*([^*]+)\*/g, '<i>$1</i>');
+                element.innerHTML = '';
+                
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(`<div>${formattedHtml}</div>`, 'text/html');
+                const words = Array.from(doc.body.firstChild.childNodes);
+                
+                words.forEach(node => {
+                    const nodeText = node.textContent;
+                    if (nodeText.trim() === '') return;
+
+                    const wordSpan = document.createElement('span');
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        wordSpan.textContent = nodeText + ' ';
+                    } else if (node.nodeType === Node.ELEMENT_NODE) {
+                        wordSpan.appendChild(node.cloneNode(true));
+                        wordSpan.innerHTML += ' ';
+                    }
+                    wordSpan.classList.add('word');
+                    element.appendChild(wordSpan);
+                });
+            }
+
+            // Función para aplicar la animación con retardo
+            function animateText(element) {
+                const words = element.querySelectorAll('.word');
+                let delay = 0;
+                words.forEach(word => {
+                    word.style.transitionDelay = `${delay}ms`;
+                    word.style.opacity = 1;
+                    word.style.transform = 'translateY(0)';
+                    delay += 70;
+                });
+            }
+
+            // Animar el "Hero Section" inmediatamente en la carga
+            const heroElements = document.querySelectorAll('.hero-content .text-reveal-container');
+            heroElements.forEach(element => {
+                setupTextReveal(element);
+                animateText(element);
+            });
+
+            // Observer para activar la animación cuando las secciones entran en el viewport
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionsToAnimate = entry.target.querySelectorAll('.text-reveal-container');
+                        sectionsToAnimate.forEach(section => {
+                            setupTextReveal(section);
+                            animateText(section);
+                        });
+                        observer.unobserve(entry.target); // Dejar de observar después de animar
+                    }
+                });
+            }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
+
+            // Observar todas las secciones relevantes
+            const sectionsToObserve = document.querySelectorAll('#about, #services, #blogs, #contact');
+            sectionsToObserve.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
