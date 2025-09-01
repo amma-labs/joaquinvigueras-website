@@ -6,19 +6,21 @@
     <title>Joaquín Vigueras | Futuros para Líderes</title>
     
     <!-- Enlace a las fuentes Barlow y Barlow Condensed de Google Fonts -->
+    <!-- Se ha actualizado para cargar Barlow con un peso de 500 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Barlow:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Barlow:wght@500&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVhj.png" type="image/png">
+    <link rel="icon" href="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVish.png" type="image/png">
     <style>
         /* Ahora la imagen de fondo se aplica a todo el cuerpo de la página */
         body {
             font-family: 'Barlow', sans-serif;
-            font-weight: 400;
+            /* El peso de la fuente se ha actualizado a 500 para el cuerpo */
+            font-weight: 500;
             color: #000000; /* Texto negro para que contraste con el fondo claro */
             background-image: url('https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/coming%20SOON.png');
             background-size: cover;
@@ -84,7 +86,8 @@
         .scrolling-text {
             display: inline-flex;
             gap: 2rem;
-            animation: marquee 30s linear infinite;
+            /* Se ha ajustado la duración de la animación a 120s para hacerla más lenta */
+            animation: marquee 120s linear infinite;
         }
 
         @keyframes marquee {
@@ -158,11 +161,12 @@
     <!-- Primera cinta de texto animada -->
     <div class="scrolling-text-container py-3 bg-yellow-400">
         <div class="scrolling-text">
+            <!-- Se han quitado los hashtags y se ha confirmado la negrita -->
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
-                Estrategia de Futuros &bull; Análisis Geopolítico &bull; Consultoría de Narrativa &bull; Gestión de Crisis &bull; Análisis de Riesgo Financiero
+                INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
-                Estrategia de Futuros &bull; Análisis Geopolítico &bull; Consultoría de Narrativa &bull; Gestión de Crisis &bull; Análisis de Riesgo Financiero
+                INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
         </div>
     </div>
@@ -241,11 +245,12 @@
     <!-- Segunda cinta de texto animada (en dirección opuesta) -->
     <div class="scrolling-text-container py-3 bg-red-500 mt-12">
         <div class="scrolling-text" style="animation-direction: reverse;">
+            <!-- Se han quitado los hashtags y se ha confirmado la negrita -->
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
-                Foresight &bull; Narrativa Estratégica &bull; Geopolítica &bull; Riesgo Financiero &bull; Liderazgo
+                INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
-                Foresight &bull; Narrativa Estratégica &bull; Geopolítica &bull; Riesgo Financiero &bull; Liderazgo
+                INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
         </div>
     </div>
@@ -310,13 +315,14 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 sm:py-24 relative z-0">
-        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-black text-center">
+    <!-- Contact Section with new style -->
+    <section id="contact" class="py-12 sm:py-24 relative z-0 text-black">
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <!-- Logo in Contact Section has been removed -->
+            <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase">
                 ¿Estás pensando en el futuro? Yo ya estoy ahí.
             </h2>
-            <p class="mt-4 text-lg sm:text-2xl text-black text-center">
+            <p class="mt-4 text-lg sm:text-2xl">
                 Contacta conmigo para explorar cómo podemos trabajar juntos.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -331,9 +337,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 relative z-0">
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-lg sm:text-xl text-black">
-            © 2025 Joaquín Vigueras. Todos los derechos reservados.
+    <footer class="py-4 relative z-0 bg-black text-white">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex items-center justify-center space-x-4">
+             <!-- Logo en el pie de página -->
+             <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVssss.png" alt="Logotipo de Joaquín Vigueras" class="h-16 sm:h-20">
+            <div class="flex flex-col text-left">
+                <span class="text-lg sm:text-xl">© 2025 Joaquín Vigueras</span>
+                <span class="text-xs sm:text-sm">Todos los derechos reservados.</span>
+            </div>
         </div>
     </footer>
 
@@ -420,7 +431,7 @@
             // Observar todas las secciones relevantes
             const sectionsToObserve = document.querySelectorAll('#about, #services, #blogs, #contact');
             sectionsToObserve.forEach(section => {
-                observer.observe(section);
+        observer.observe(section);
             });
 
             // Lógica para los menús colapsables de la sección "Servicios"
