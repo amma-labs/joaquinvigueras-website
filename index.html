@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joaquín Vigueras | Futuros para Líderes</title>
+    <title>Joaquín Vigueras</title>
     
     <!-- Enlace a las fuentes Barlow y Barlow Condensed de Google Fonts -->
     <!-- Se ha actualizado para cargar Barlow con un peso de 500 -->
@@ -125,6 +125,7 @@
         <div class="p-8">
             <nav class="flex flex-col space-y-6 mt-16">
                 <a href="#about" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mi</a>
+                <!-- Se ha eliminado el enlace al portafolio -->
                 <a href="#services" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Servicios</a>
                 <a href="#blogs" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Blogs</a>
                 <a href="#contact" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Contacto</a>
@@ -139,12 +140,11 @@
     <header class="hero-section text-black">
         
         <div class="hero-content max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Título con animación de revelado -->
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-tight uppercase text-reveal-container">
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center mb-4">
                 Anticipando el Futuro para Líderes que Deciden Hoy.
             </h1>
             <!-- Párrafo con animación de revelado -->
-            <p class="mt-4 sm:mt-6 text-lg sm:text-2xl text-black max-w-2xl mx-auto text-reveal-container">
+            <p class="mt-4 sm:mt-6 text-lg sm:text-2xl text-black max-w-2xl mx-auto text-reveal-container uppercase">
                 Combino análisis de riesgo país, geopolítica y coyuntura electoral con pensamiento estratégico y herramientas de *foresight*.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -172,9 +172,14 @@
     </div>
 
     <!-- Services Section -->
-    <section id="services" class="py-12 sm:py-24 relative z-0">
+    <section id="services" class="py-8 sm:py-16 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
-            <p class="mt-4 text-lg sm:text-2xl text-center">
+            <!-- Las imágenes de portafolio se han movido aquí -->
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8 justify-center items-center mb-8 sm:mb-16">
+                <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/3.png" alt="Gráfico de un mapa mental" class="w-full sm:w-1/2 rounded-lg object-cover">
+                <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/2.png" alt="Gráfico de análisis de ideas con un cerebro" class="w-full sm:w-1/2 rounded-lg object-cover">
+            </div>
+            <p class="mt-4 text-lg sm:text-2xl text-center uppercase">
                 Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
@@ -243,7 +248,7 @@
     </section>
 
     <!-- Segunda cinta de texto animada (en dirección opuesta) -->
-    <div class="scrolling-text-container py-3 bg-red-500 mt-12">
+    <div class="scrolling-text-container py-3 bg-red-500 mt-8">
         <div class="scrolling-text" style="animation-direction: reverse;">
             <!-- Se han quitado los hashtags y se ha confirmado la negrita -->
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
@@ -256,11 +261,11 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="py-12 sm:py-24 relative z-0">
+    <section id="about" class="py-8 sm:py-16 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
             <!-- La imagen se ha añadido aquí y se ha eliminado el título -->
             <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JV%20(400%20x%20400%20px).png" alt="Retrato de Joaquín Vigueras" class="w-64 h-64 object-cover mx-auto mb-4">
-            <p class="mt-2 text-lg sm:text-2xl text-center">
+            <p class="mt-2 text-lg sm:text-2xl text-center uppercase">
                 Soy un politólogo con formación financiera, dedicado a traducir escenarios futuros en estrategias accionables.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
@@ -290,7 +295,7 @@
     </section>
 
     <!-- Blogs Section -->
-    <section id="blogs" class="py-12 sm:py-24 relative z-0">
+    <section id="blogs" class="py-8 sm:py-16 relative z-0">
         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
             <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center">
                 Blogs
@@ -321,7 +326,7 @@
             <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase">
                 ¿Estás pensando en el futuro? Yo ya estoy ahí.
             </h2>
-            <p class="mt-4 text-lg sm:text-2xl">
+            <p class="mt-4 text-lg sm:text-2xl uppercase">
                 Contacta conmigo para explorar cómo podemos trabajar juntos.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
