@@ -6,7 +6,6 @@
     <title>Joaquín Vigueras</title>
     
     <!-- Enlace a las fuentes Barlow y Barlow Condensed de Google Fonts -->
-    <!-- Se ha actualizado para cargar Barlow con un peso de 500 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Barlow:wght@500&display=swap" rel="stylesheet">
@@ -19,13 +18,12 @@
         /* Ahora la imagen de fondo se aplica a todo el cuerpo de la página */
         body {
             font-family: 'Barlow', sans-serif;
-            /* El peso de la fuente se ha actualizado a 500 para el cuerpo */
             font-weight: 500;
-            color: #000000; /* Texto negro para que contraste con el fondo claro */
+            color: #000000;
             background-image: url('https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/coming%20SOON.png');
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: scroll; /* Se mueve con el desplazamiento de la página */
+            background-attachment: scroll;
             background-position: center;
         }
 
@@ -40,7 +38,8 @@
         }
         .hero-section {
             position: relative;
-            height: 100vh;
+            /* La altura se ha reducido para disminuir el espacio */
+            height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,7 +85,6 @@
         .scrolling-text {
             display: inline-flex;
             gap: 2rem;
-            /* Se ha ajustado la duración de la animación a 120s para hacerla más lenta */
             animation: marquee 120s linear infinite;
         }
 
@@ -125,7 +123,6 @@
         <div class="p-8">
             <nav class="flex flex-col space-y-6 mt-16">
                 <a href="#about" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mi</a>
-                <!-- Se ha eliminado el enlace al portafolio -->
                 <a href="#services" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Servicios</a>
                 <a href="#blogs" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Blogs</a>
                 <a href="#contact" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Contacto</a>
@@ -138,7 +135,6 @@
 
     <!-- Header Section (Hero) -->
     <header class="hero-section text-black">
-        
         <div class="hero-content max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center mb-4">
                 Anticipando el Futuro para Líderes que Deciden Hoy.
@@ -161,7 +157,6 @@
     <!-- Primera cinta de texto animada -->
     <div class="scrolling-text-container py-3 bg-yellow-400">
         <div class="scrolling-text">
-            <!-- Se han quitado los hashtags y se ha confirmado la negrita -->
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
                 INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
@@ -250,7 +245,6 @@
     <!-- Segunda cinta de texto animada (en dirección opuesta) -->
     <div class="scrolling-text-container py-3 bg-red-500 mt-8">
         <div class="scrolling-text" style="animation-direction: reverse;">
-            <!-- Se han quitado los hashtags y se ha confirmado la negrita -->
             <span class="text-2xl sm:text-3xl font-bold uppercase tracking-wider text-black font-barlow-condensed inline-block">
                 INNOVATION VISION PROGRESS DISCOVERY TRANSFORMATION CREATION GROWTH PIONEER FUTURE EVOLUTION
             </span>
