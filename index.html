@@ -100,7 +100,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navbar -->
+    <!-- Navbar principal (fija) -->
     <nav class="fixed top-0 left-0 right-0 py-4 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center h-16">
@@ -124,6 +124,7 @@
             <nav class="flex flex-col space-y-6 mt-16">
                 <a href="#about" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mi</a>
                 <a href="#services" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Servicios</a>
+                <a href="#futura-agnostic" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Futura Agnostic</a>
                 <a href="#blogs" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Blogs</a>
                 <a href="#contact" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Contacto</a>
             </nav>
@@ -132,6 +133,11 @@
 
     <!-- Overlay to close the menu -->
     <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
+
+    <!-- Enlace de FUTURA AGNOSTIC (ahora se mueve con el contenido y está más arriba) -->
+    <div class="mt-20">
+        <a href="https://futura-agnostic.lovable.app/" target="_blank" class="block text-right pr-4 sm:pr-8 text-base sm:text-xl uppercase text-black hover:text-yellow-400 transition duration-300 z-50">FUTURA AGNOSTIC</a>
+    </div>
 
     <!-- Header Section (Hero) -->
     <header class="hero-section text-black">
@@ -154,6 +160,7 @@
             </div>
             </div>
     </header>
+
 
     <!-- Primera cinta de texto animada -->
     <div class="scrolling-text-container py-3 bg-yellow-400">
@@ -179,18 +186,6 @@
                 Trabajo con quienes diseñan políticas, lideran organizaciones o crean impacto en medio del ruido.
             </p>
             <div class="mt-10 sm:mt-12 space-y-8">
-                <!-- Service 1 (Collapsible) -->
-                <div class="rounded-lg overflow-hidden">
-                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Estrategia de Futuros</h3>
-                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
-                    </button>
-                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
-                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
-                            Ayudo a organizaciones y líderes a identificar oportunidades y riesgos emergentes, creando escenarios futuros que informan sus decisiones estratégicas hoy.
-                        </p>
-                    </div>
-                </div>
                 <!-- Service 2 (Collapsible) -->
                 <div class="rounded-lg overflow-hidden">
                     <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
@@ -227,15 +222,58 @@
                         </p>
                     </div>
                 </div>
-                <!-- Service 5 (Collapsible) -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Imagen de Futura Agnostic -->
+    <div class="relative z-10 max-w-xs mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+        <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/FA%20(400%20x%20400%20px).png" alt="Logotipo de Futura Agnostic" class="w-full h-auto object-cover rounded-lg">
+    </div>
+
+    <!-- Nueva sección para Futura Agnostic -->
+    <section id="futura-agnostic" class="pt-4 sm:pt-8 relative z-0">
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-black">
+            <h2 class="text-4xl sm:text-6xl font-bold tracking-tight uppercase text-center">
+                <a href="https://futura-agnostic.lovable.app/" target="_blank" class="hover:text-yellow-400 transition duration-300">FUTURA AGNOSTIC</a>
+            </h2>
+            <p class="mt-4 text-lg sm:text-2xl text-center uppercase">
+                Una Agencia donde conversamos sobre los futuros y elaboramos prospectivas.
+            </p>
+            <div class="mt-10 sm:mt-12 space-y-8">
+                <!-- Estrategia de Futuros (Actualizado) -->
                 <div class="rounded-lg overflow-hidden">
                     <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
-                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Análisis de Riesgo Financiero</h3>
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Estrategia de Futuros</h3>
                         <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
                     </button>
                     <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
                         <p class="p-6 pt-0 text-lg sm:text-xl text-left">
-                            Evalúo carteras de crédito y riesgo operacional, integrando criterios regulatorios y alineando los estándares con los principios de inclusión financiera.
+                            En Futura Agnostic ayudamos a líderes y organizaciones a anticipar el cambio y navegar las complejidades del siglo XXI. Identificamos oportunidades y riesgos emergentes, construyendo escenarios futuros que guían sus decisiones estratégicas hoy.
+                        </p>
+                    </div>
+                </div>
+                <!-- Nuevo bloque: Investigación Multidisciplinaria -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Investigación Multidisciplinaria</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
+                            Junto a expertos de diversas áreas, evaluamos innovaciones y transiciones tecnológicas, conectándolas con tendencias globales. Nuestro enfoque interdisciplinario permite identificar oportunidades y riesgos emergentes, ofreciendo perspectivas completas para la toma de decisiones estratégicas.
+                        </p>
+                    </div>
+                </div>
+                <!-- Nuevo bloque: Divulgación -->
+                <div class="rounded-lg overflow-hidden">
+                    <button class="flex items-center justify-between w-full p-6 text-left focus:outline-none service-button border-black border">
+                        <h3 class="text-2xl sm:text-3xl font-semibold uppercase">Divulgación</h3>
+                        <span class="text-2xl sm:text-3xl font-bold transform transition-transform duration-300 icon">+</span>
+                    </button>
+                    <div class="p-0 transition-max-h duration-500 ease-in-out max-h-0 overflow-hidden service-content">
+                        <p class="p-6 pt-0 text-lg sm:text-xl text-left">
+                            A través de charlas y análisis, comunicamos el impacto de nuevas tendencias en la economía, las políticas públicas, los cambios sociales y la ecología. Buscamos generar conciencia y comprensión sobre cómo los cambios globales y tecnológicos moldean nuestro presente y futuro.
                         </p>
                     </div>
                 </div>
@@ -428,7 +466,7 @@
             }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
 
             // Observar todas las secciones relevantes
-            const sectionsToObserve = document.querySelectorAll('#about, #services, #blogs, #contact');
+            const sectionsToObserve = document.querySelectorAll('#about, #services, #blogs, #contact, #futura-agnostic');
             sectionsToObserve.forEach(section => {
         observer.observe(section);
             });
