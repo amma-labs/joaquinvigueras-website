@@ -99,33 +99,49 @@
                 transform: translateX(-50%);
             }
         }
+        
+        /* Asegurarse de que el contenido no se superponga con la barra de navegación fija */
+        html {
+            scroll-padding-top: 100px;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Navbar principal (fija) -->
-    <nav class="fixed top-0 left-0 right-0 py-4 z-50">
+    <nav class="fixed top-0 left-0 right-0 py-4 z-50 bg-transparent shadow-none">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center h-16">
-                <!-- Hamburger Menu Button -->
-                <button id="menu-button" class="p-2 text-black focus:outline-none">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVssss.png" alt="Logotipo de Joaquín Vigueras" class="h-16 sm:h-20">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden sm:flex sm:items-center sm:space-x-4">
+                    <a href="#about" class="text-xl uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">Acerca de Mí</a>
+                    <a href="#services" class="text-xl uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">Servicios</a>
+                    <a href="#futura-agnostic" class="text-xl uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">Futura Agnostic</a>
+                    <a href="#blogs" class="text-xl uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">Blogs</a>
+                    <a href="#contact" class="text-xl uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">Contacto</a>
+                    <a href="https://futura-agnostic.lovable.app/" target="_blank" class="text-base uppercase text-black hover:text-yellow-400 transition duration-300 font-bold p-2 rounded-md">FUTURA AGNOSTIC</a>
+                </div>
+
+                <!-- Hamburger Menu Button (visible on mobile) -->
+                <button id="menu-button" class="sm:hidden p-2 text-black focus:outline-none">
                     <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
-                <!-- Logo -->
-                <a href="#">
-                    <img src="https://raw.githubusercontent.com/jviglab/joaquinvigueras-website/main/JVssss.png" alt="Logotipo de Joaquín Vigueras" class="h-16 sm:h-20">
-                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Sidebar Menu (Hidden by default) -->
-    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-[#ffbd59] z-40 transition-transform">
+    <!-- Sidebar Menu (Hidden by default, visible on mobile) -->
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-[#ffbd59] z-40 transition-transform sm:hidden">
         <div class="p-8">
             <nav class="flex flex-col space-y-6 mt-16">
-                <a href="#about" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mi</a>
+                <a href="#about" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Acerca de Mí</a>
                 <a href="#services" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Servicios</a>
                 <a href="#futura-agnostic" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Futura Agnostic</a>
                 <a href="#blogs" class="text-xl text-black hover:bg-gray-200 transition duration-300 uppercase font-bold p-2 rounded-md" onclick="closeMenu()">Blogs</a>
@@ -136,11 +152,6 @@
 
     <!-- Overlay to close the menu -->
     <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
-
-    <!-- Enlace de FUTURA AGNOSTIC (ahora se mueve con el contenido y está más arriba) -->
-    <div class="mt-20">
-        <a href="https://futura-agnostic.lovable.app/" target="_blank" class="block text-right pr-4 sm:pr-8 text-base sm:text-xl uppercase text-black hover:text-yellow-400 transition duration-300 z-50">FUTURA AGNOSTIC</a>
-    </div>
 
     <!-- Header Section (Hero) -->
     <header class="hero-section text-black">
@@ -158,7 +169,7 @@
                     Descubre mis servicios estratégicos
                 </a>
                 <a href="https://www.linkedin.com/in/jvig/" target="_blank" class="px-6 py-3 border border-black rounded-full font-medium text-black hover:bg-yellow-400 hover:text-gray-900 transition duration-300">
-                    LinkedIn de Joaquín Vigueras
+                    LinkedIn
                 </a>
             </div>
         </div>
